@@ -1,4 +1,4 @@
 #!/bin/sh
 cd ARRAY
-gcc ADT.c
+gcc Delection.c
 ./a.out
