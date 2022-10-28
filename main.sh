@@ -1,4 +1,4 @@
 #!/bin/sh
-cd ARRAY
-gcc Delection.c
+cd LINKEDLIST
+gcc main.c
 ./a.out
