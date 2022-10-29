@@ -1,4 +1,4 @@
 #!/bin/sh
 cd LINKEDLIST
-gcc main.c
+gcc insertion.c
 ./a.out
