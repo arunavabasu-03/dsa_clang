@@ -1,3 +1,5 @@
+/* all operations are performed in O(1) */
+
 #include <stdio.h>
 #include <stdlib.h>
 struct stack
@@ -12,21 +14,17 @@ if we do not pass address ; we need to get the values as a function argument
 */
 
 /* isEmpty */
-int isEmpty(struct stack *ptr)
-{
-    if (ptr->top == -1)
-    {
+int isEmpty(struct stack *ptr){
+    if (ptr->top == -1){
 
         return 1; // return 1 means true
     }
-    else
-    {
+    else{
         return 0; // return 0 means false
     }
 }
 /* isFull */
-int isFull(struct stack *ptr)
-{
+int isFull(struct stack *ptr){
     if (ptr->top == ptr->size - 1)
     {
 
@@ -39,10 +37,8 @@ int isFull(struct stack *ptr)
 }
 
 /* push */
-void push(struct stack *ptr, int value)
-{
-    if (isFull(ptr))
-    {
+void push(struct stack *ptr, int value){
+    if (isFull(ptr)){
         printf("StackOverFlow !! cannot push %d to the stack  \n", value);
     }
     else
@@ -53,8 +49,7 @@ void push(struct stack *ptr, int value)
 };
 
 /* pop */
-int pop(struct stack *ptr)
-{
+int pop(struct stack *ptr){
     if (isEmpty(ptr))
     {
         /* code */
@@ -69,10 +64,8 @@ int pop(struct stack *ptr)
 };
 
 /* peck */
-int peck(struct stack *ptr, int i)
-{
-    if (ptr->top - i + 1 < 0)
-    {
+int peck(struct stack *ptr, int i){
+    if (ptr->top - i + 1 < 0){
         printf("Invalid position");
     }
     else
@@ -81,8 +74,16 @@ int peck(struct stack *ptr, int i)
     }
 }
 
-int main()
-{
+/* stack bottom */
+int stackBottom(struct stack *ptr){
+    return ptr->arr[0];
+}
+/* stack top */
+int stackTop (struct stack *ptr){
+    return ptr->arr[ptr->top];
+}
+
+int main(){
     /* creating stack */
     /*
     struct stack s;
