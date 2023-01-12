@@ -1,5 +1,4 @@
 # include <stdio.h>
-
 /* bubble short */
 void bubbleShort(int array[],int size){
 /* create a pointer */
